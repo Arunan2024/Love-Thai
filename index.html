@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำขอแต่งงานจากใจของฉัน</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@300;400;600;700&family=Dancing+Script:wght@400;700&family=Charm:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Athiti', sans-serif;
+            background: linear-gradient(135deg, #f8f3e6, #fff9f0);
+            color: #4a2c2a;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Thai Pattern Header */
+        .thai-header {
+            text-align: center;
+            padding: 40px 0 20px;
+            position: relative;
+        }
+        
+        .thai-pattern {
+            height: 30px;
+            background: linear-gradient(to right, #d4a574, #b8865e, #d4a574);
+            position: relative;
+            margin-bottom: 30px;
+            border-radius: 2px;
+        }
+        
+        .thai-pattern::before, .thai-pattern::after {
+            content: "";
+            position: absolute;
+            height: 10px;
+            width: 100%;
+            background-color: #8b4513;
+            top: 10px;
+        }
+        
+        .thai-pattern::after {
+            top: 20px;
+            background-color: #d2691e;
+        }
+        
+        .golden-lotus {
+            color: #ffd700;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        h1 {
+            font-family: 'Charm', cursive;
+            font-size: 3.8rem;
+            color: #8b4513;
+            margin: 20px 0 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            line-height: 1.2;
+        }
+        
+        .thai-subtitle {
+            font-size: 1.8rem;
+            color: #b8865e;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-family: 'Charm', cursive;
+        }
+        
+        /* Main Photo Section */
+        .photo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+        }
+        
+        .main-photo-frame {
+            width: 380px;
+            height: 480px;
+            border: 15px solid #f5e6d3;
+            border-radius: 5px;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.3);
+            margin-bottom: 30px;
+            background-color: #fff;
+            overflow: hidden;
+        }
+        
+        .main-photo-frame::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+            z-index: -1;
+            border-radius: 10px;
+        }
+        
+        #herPhoto {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .main-photo-frame:hover #herPhoto {
+            transform: scale(1.05);
+        }
+        
+        .photo-caption {
+            text-align: center;
+            font-size: 1.4rem;
+            color: #8b4513;
+            font-family: 'Charm', cursive;
+            margin-top: 15px;
+            padding: 0 20px;
+        }
+        
+        /* Message Section */
+        .message-section {
+            background-color: rgba(255, 253, 248, 0.9);
+            border-radius: 20px;
+            padding: 50px 40px;
+            margin: 40px auto;
+            max-width: 900px;
+            box-shadow: 0 15px 40px rgba(139, 69, 19, 0.15);
+            border: 3px solid #f5e6d3;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .message-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(to right, #d4a574, #ffd700, #d4a574);
+        }
+        
+        .message-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .message-header h2 {
+            font-family: 'Charm', cursive;
+            font-size: 3.2rem;
+            color: #8b4513;
+            margin-bottom: 10px;
+        }
+        
+        .her-name {
+            font-family: 'Charm', cursive;
+            font-size: 2.5rem;
+            color: #b8865e;
+            margin-bottom: 5px;
+            text-decoration: underline;
+            text-decoration-color: #ffd700;
+            text-underline-offset: 8px;
+        }
+        
+        .from-name {
+            font-size: 1.5rem;
+            color: #d2691e;
+            font-weight: 600;
+        }
+        
+        .message-content {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: #4a2c2a;
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+        
+        .thai-quote {
+            font-family: 'Charm', cursive;
+            font-size: 1.8rem;
+            color: #8b4513;
+            text-align: center;
+            margin: 40px 0;
+            font-style: italic;
+            padding: 20px;
+            background-color: rgba(255, 215, 0, 0.1);
+            border-radius: 10px;
+            border-right: 5px solid #ffd700;
+            border-left: 5px solid #ffd700;
+        }
+        
+        /* Proposal Section */
+        .proposal-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to bottom, rgba(255, 253, 248, 0.9), rgba(255, 248, 225, 0.9));
+            border-radius: 20px;
+            margin: 40px auto;
+            max-width: 900px;
+            box-shadow: 0 15px 40px rgba(139, 69, 19, 0.15);
+            border: 3px solid #f5e6d3;
+        }
+        
+        .proposal-text {
+            font-size: 2rem;
+            color: #8b4513;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .proposal-question {
+            font-family: 'Charm', cursive;
+            font-size: 3.5rem;
+            color: #b8865e;
+            margin: 40px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Response Buttons */
+        .response-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .response-btn {
+            padding: 20px 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s;
+            font-family: 'Athiti', sans-serif;
+            min-width: 280px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        #yesBtn {
+            background: linear-gradient(to right, #4CAF50, #2E7D32);
+            color: white;
+        }
+        
+        #yesBtn:hover {
+            background: linear-gradient(to right, #66BB6A, #388E3C);
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(76, 175, 80, 0.4);
+        }
+        
+        #maybeBtn {
+            background: linear-gradient(to right, #FFC107, #FF8F00);
+            color: #4a2c2a;
+        }
+        
+        #maybeBtn:hover {
+            background: linear-gradient(to right, #FFD54F, #FFB300);
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(255, 193, 7, 0.4);
+        }
+        
+        /* Celebration Section */
+        .celebration-section {
+            display: none;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to bottom, rgba(76, 175, 80, 0.1), rgba(46, 125, 50, 0.1));
+            border-radius: 20px;
+            margin: 40px auto;
+            max-width: 900px;
+            border: 3px solid #4CAF50;
+        }
+        
+        .celebration-title {
+            font-family: 'Charm', cursive;
+            font-size: 4rem;
+            color: #2E7D32;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+        }
+        
+        .celebration-message {
+            font-size: 1.8rem;
+            color: #4a2c2a;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+        
+        /* Response Status Section */
+        .response-status {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(255, 253, 248, 0.9);
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 800px;
+            border: 2px solid #d4a574;
+            display: none;
+        }
+        
+        .status-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .status-message {
+            font-size: 1.5rem;
+            color: #8b4513;
+            line-height: 1.6;
+        }
+        
+        /* Admin Panel (Hidden from her) */
+        .admin-panel {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(139, 69, 19, 0.9);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            max-width: 300px;
+            display: none;
+        }
+        
+        .admin-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #8b4513;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1001;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .admin-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+        
+        .admin-info {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+        
+        .response-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+        
+        /* Thai Elements */
+        .thai-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .thai-element {
+            position: absolute;
+            color: rgba(255, 215, 0, 0.3);
+            font-size: 40px;
+            animation: floatThai 15s linear infinite;
+        }
+        
+        .golden-flower {
+            color: rgba(255, 215, 0, 0.4);
+            font-size: 30px;
+            animation: rotate 20s linear infinite;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0 30px;
+            margin-top: 60px;
+            color: #8b4513;
+            font-size: 1rem;
+            border-top: 2px solid #f5e6d3;
+            position: relative;
+        }
+        
+        footer::before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #d4a574, #ffd700, #d4a574);
+        }
+        
+        .thai-heart {
+            color: #ff4d6d;
+            font-size: 1.5rem;
+            margin: 0 5px;
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes floatThai {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.5;
+            }
+            90% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            .thai-subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .main-photo-frame {
+                width: 300px;
+                height: 380px;
+            }
+            
+            .message-section, .proposal-section {
+                padding: 30px 20px;
+                margin: 20px auto;
+            }
+            
+            .message-header h2 {
+                font-size: 2.5rem;
+            }
+            
+            .her-name {
+                font-size: 2rem;
+            }
+            
+            .message-content {
+                font-size: 1.3rem;
+                padding: 0 10px;
+            }
+            
+            .proposal-question {
+                font-size: 2.8rem;
+            }
+            
+            .proposal-text {
+                font-size: 1.6rem;
+            }
+            
+            .response-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+            }
+            
+            .response-btn {
+                min-width: 250px;
+                padding: 18px 40px;
+                font-size: 1.6rem;
+            }
+            
+            .celebration-title {
+                font-size: 3rem;
+            }
+            
+            .celebration-message {
+                font-size: 1.5rem;
+            }
+            
+            .admin-panel {
+                bottom: 10px;
+                right: 10px;
+                left: 10px;
+                max-width: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .main-photo-frame {
+                width: 260px;
+                height: 330px;
+            }
+            
+            .proposal-question {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Admin Toggle Button -->
+    <div class="admin-toggle" id="adminToggle">
+        <i class="fas fa-eye"></i>
+    </div>
+    
+    <!-- Admin Panel -->
+    <div class="admin-panel" id="adminPanel">
+        <div class="admin-title">Proposal Response Tracker</div>
+        <div class="admin-info">
+            This panel is only visible to you. It shows if she has responded and what she chose.
+        </div>
+        <div id="responseData">
+            <p>Waiting for her response...</p>
+        </div>
+        <div style="margin-top: 15px; font-size: 0.8rem; color: #ffd700;">
+            <i class="fas fa-info-circle"></i> Her response is saved locally and can be sent to your email.
+        </div>
+        <button id="sendEmailBtn" style="margin-top: 15px; padding: 8px 15px; background: #ffd700; color: #8b4513; border: none; border-radius: 5px; cursor: pointer; width: 100%;">
+            <i class="fas fa-envelope"></i> Send Response to My Email
+        </button>
+    </div>
+    
+    <!-- Thai Elements Background -->
+    <div class="thai-elements" id="thaiElements"></div>
+    
+    <div class="container">
+        <!-- Thai Pattern Header -->
+        <div class="thai-header">
+            <div class="thai-pattern"></div>
+            <div class="golden-lotus">
+                <i class="fas fa-spa"></i>
+            </div>
+            <h1>คำขอแต่งงานจากใจของฉัน</h1>
+            <div class="thai-subtitle">ขอเธอได้โปรดเป็นคู่ชีวิตของฉัน</div>
+        </div>
+        
+        <!-- Main Photo Section -->
+        <section class="photo-section fade-in">
+            <div class="main-photo-frame">
+                <img id="herPhoto" src="Screenshot 2026-01-09 at 21.17.54.png" alt="The most beautiful woman in my life">
+            </div>
+            <div class="photo-caption">
+                ผู้หญิงที่สวยที่สุดในชีวิตของฉัน<br>
+                <span style="font-size: 1.2rem; color: #d2691e;">เธอคือแสงสว่างในทุกๆ วันของฉัน</span>
+            </div>
+        </section>
+        
+        <!-- Love Message Section -->
+        <section class="message-section fade-in">
+            <div class="message-header">
+                <h2>ข้อความจากใจ</h2>
+                <div class="her-name">ที่รักของฉัน</div>
+                <div class="from-name">จาก <span id="yourName">ผู้ที่รักเธอมากที่สุด</span></div>
+            </div>
+            
+            <div class="message-content">
+                <p>ตั้งแต่ได้พบเจอเธอเข้ามาในชีวิต ทุกอย่างในโลกใบนี้ดูสดใสขึ้นมาในทันที</p>
+                <p>รอยยิ้มของเธอคือแสงอาทิตย์ที่ส่องสว่างให้กับชีวิตของฉัน</p>
+                <p>เสียงหัวเราะของเธอคือทำนองเพลงที่ไพเราะที่สุด</p>
+                <p>และความรักของเธอคือของขวัญล้ำค่าที่สุดที่ฉันเคยได้รับมาในชีวิตนี้</p>
+            </div>
+            
+            <div class="thai-quote">
+                "ความรักที่แท้จริงไม่ใช่การมองตากัน แต่คือการมองไปในทิศทางเดียวกัน"
+            </div>
+            
+            <div class="message-content">
+                <p>ทุกวันที่ได้ใช้เวลาอยู่กับเธอ ฉันรู้สึกขอบคุณชะตากรรมที่ได้พาเรามาพบกัน</p>
+                <p>เธอไม่เพียงแค่เป็นคนรักของฉัน แต่เธอคือเพื่อนคู่ใจ ที่ปรึกษา และแรงบันดาลใจในชีวิต</p>
+                <p>ฉันอยากจะตื่นขึ้นมาเห็นหน้าเธอทุกเช้า และนอนหลับไปด้วยกันทุกคืน</p>
+                <p>ฉันสัญญาว่าจะดูแลเธอ รักเธอ และทำให้เธอยิ้มได้ทุกวัน</p>
+            </div>
+        </section>
+        
+        <!-- Proposal Section -->
+        <section class="proposal-section fade-in" id="proposalSection">
+            <div class="proposal-text">
+                <p>เมื่อมองไปยังภาพถ่ายของเธอ ฉันรู้ว่าฉันต้องการให้เธออยู่เคียงข้างฉันไปตลอดชีวิต</p>
+                <p>ฉันต้องการสร้างความทรงจำที่สวยงามกับเธอในทุกๆ วัน</p>
+                <p>ฉันต้องการเป็นคนที่โชคดีที่สุดในโลก...</p>
+            </div>
+            
+            <div class="proposal-question">
+                เธอจะแต่งงานกับฉันไหม?
+            </div>
+            
+            <div class="proposal-text">
+                <p>ฉันสัญญาว่าจะรักเธอ ดูแลเธอ และเคียงข้างเธอ</p>
+                <p>ไม่ว่าจะผ่านเรื่องราวดีหรือร้าย เราจะฝ่าฟันไปด้วยกัน</p>
+                <p>โปรดให้โอกาสฉันได้ทำให้เธอเป็นหญิงที่มีความสุขที่สุด</p>
+            </div>
+            
+            <div class="response-buttons">
+                <button class="response-btn" id="yesBtn">
+                    <i class="fas fa-heart"></i> ฉันตกลง! ใช่เลย!
+                </button>
+                <button class="response-btn" id="maybeBtn">
+                    <i class="fas fa-clock"></i> ฉันต้องการเวลาคิดหน่อย
+                </button>
+            </div>
+        </section>
+        
+        <!-- Response Status Section -->
+        <div class="response-status" id="responseStatus">
+            <div class="status-icon" id="statusIcon"></div>
+            <div class="status-message" id="statusMessage"></div>
+        </div>
+        
+        <!-- Celebration Section (Hidden Initially) -->
+        <section class="celebration-section" id="celebrationSection">
+            <div class="celebration-title">
+                <i class="fas fa-heart"></i> เธอตอบตกลง! <i class="fas fa-heart"></i>
+            </div>
+            <div class="celebration-message">
+                <p>นี่คือช่วงเวลาที่มีความสุขที่สุดในชีวิตของฉัน!</p>
+                <p>ขอบคุณที่ทำให้ความฝันของฉันเป็นจริง</p>
+                <p>ฉันสัญญาว่าจะรักเธอ ดูแลเธอ และทำให้เธอยิ้มได้ทุกวัน</p>
+                <p>จากนี้ไป เราจะเดินทางไปด้วยกันตลอดชีวิต</p>
+                <p style="margin-top: 30px; font-size: 2rem; color: #2E7D32; font-family: 'Charm', cursive;">
+                    ฉันรักเธอมากกว่าใครในโลกนี้!
+                </p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>สร้างขึ้นด้วยความรักที่แท้จริง</p>
+        <p style="margin-top: 10px;">
+            ด้วยความปรารถนาดีจากใจ 
+            <span class="thai-heart"><i class="fas fa-heart"></i></span>
+            สำหรับคนที่รักที่สุด
+            <span class="thai-heart"><i class="fas fa-heart"></i></span>
+        </p>
+        <p style="margin-top: 15px; font-size: 0.9rem; color: #b8865e;">
+            คำขอแต่งงานนี้เป็นของเธอเพียงคนเดียวตลอดไป
+        </p>
+    </footer>
+
+    <script>
+        // =================== RESPONSE TRACKING SYSTEM ===================
+        
+        // Configuration - SET YOUR EMAIL HERE
+        const YOUR_EMAIL = "s.s.arunan077@gmail.com"; // CHANGE THIS TO YOUR ACTUAL EMAIL
+        
+        // Response tracking object
+        const proposalResponse = {
+            hasResponded: false,
+            answer: null, // 'yes' or 'maybe'
+            timestamp: null,
+            ipAddress: null,
+            userAgent: null,
+            pageVisits: 1
+        };
+        
+        // Create Thai decorative elements
+        function createThaiElements() {
+            const thaiElements = document.getElementById('thaiElements');
+            const elementCount = 20;
+            
+            const thaiSymbols = ['❀', '✦', '✿', '♡', '๑', '๏', '◈', '◎', '✪', '♥'];
+            
+            for (let i = 0; i < elementCount; i++) {
+                const element = document.createElement('div');
+                element.classList.add('thai-element');
+                
+                if (Math.random() > 0.5) {
+                    element.innerHTML = thaiSymbols[Math.floor(Math.random() * thaiSymbols.length)];
+                } else {
+                    const icons = ['fa-spa', 'fa-leaf', 'fa-feather-alt', 'fa-star'];
+                    const icon = icons[Math.floor(Math.random() * icons.length)];
+                    element.innerHTML = `<i class="fas ${icon}"></i>`;
+                    element.classList.add('golden-flower');
+                }
+                
+                const left = Math.random() * 100;
+                const delay = Math.random() * 15;
+                const duration = Math.random() * 10 + 15;
+                const size = Math.random() * 30 + 20;
+                
+                element.style.left = `${left}vw`;
+                element.style.fontSize = `${size}px`;
+                element.style.animationDelay = `${delay}s`;
+                element.style.animationDuration = `${duration}s`;
+                
+                thaiElements.appendChild(element);
+            }
+        }
+        
+        // Initialize Thai elements
+        createThaiElements();
+        
+        // DOM Elements
+        const herPhoto = document.getElementById('herPhoto');
+        const proposalSection = document.getElementById('proposalSection');
+        const celebrationSection = document.getElementById('celebrationSection');
+        const responseStatus = document.getElementById('responseStatus');
+        const statusIcon = document.getElementById('statusIcon');
+        const statusMessage = document.getElementById('statusMessage');
+        const yesBtn = document.getElementById('yesBtn');
+        const maybeBtn = document.getElementById('maybeBtn');
+        const adminToggle = document.getElementById('adminToggle');
+        const adminPanel = document.getElementById('adminPanel');
+        const responseData = document.getElementById('responseData');
+        const sendEmailBtn = document.getElementById('sendEmailBtn');
+        
+        // Load saved response from localStorage
+        function loadSavedResponse() {
+            const saved = localStorage.getItem('proposalResponse');
+            if (saved) {
+                const parsed = JSON.parse(saved);
+                Object.assign(proposalResponse, parsed);
+                
+                // Update page if she already responded
+                if (proposalResponse.hasResponded) {
+                    updatePageForResponse();
+                    updateAdminPanel();
+                }
+            }
+            
+            // Track page visit
+            proposalResponse.pageVisits++;
+            saveResponseToStorage();
+        }
+        
+        // Save response to localStorage
+        function saveResponseToStorage() {
+            localStorage.setItem('proposalResponse', JSON.stringify(proposalResponse));
+        }
+        
+        // Get IP address (using a free service)
+        async function getIPAddress() {
+            try {
+                const response = await fetch('https://api.ipify.org?format=json');
+                const data = await response.json();
+                return data.ip;
+            } catch (error) {
+                return 'Unknown';
+            }
+        }
+        
+        // Record response
+        async function recordResponse(answer) {
+            proposalResponse.hasResponded = true;
+            proposalResponse.answer = answer;
+            proposalResponse.timestamp = new Date().toISOString();
+            proposalResponse.userAgent = navigator.userAgent;
+            
+            // Try to get IP address
+            proposalResponse.ipAddress = await getIPAddress();
+            
+            // Save to localStorage
+            saveResponseToStorage();
+            
+            // Update the page
+            updatePageForResponse();
+            
+            // Update admin panel
+            updateAdminPanel();
+            
+            // Try to send email notification
+            sendEmailNotification(answer);
+        }
+        
+        // Update page based on response
+        function updatePageForResponse() {
+            if (proposalResponse.answer === 'yes') {
+                // She said YES!
+                proposalSection.style.display = 'none';
+                celebrationSection.style.display = 'block';
+                celebrationSection.classList.add('fade-in');
+                createGoldenCelebration();
+                celebrationSection.scrollIntoView({ behavior: 'smooth' });
+                
+                // Update response status
+                responseStatus.style.display = 'block';
+                responseStatus.style.backgroundColor = 'rgba(76, 175, 80, 0.1)';
+                responseStatus.style.borderColor = '#4CAF50';
+                statusIcon.innerHTML = '<i class="fas fa-heart" style="color:#4CAF50"></i>';
+                statusMessage.innerHTML = `
+                    <p><strong>เธอตอบตกลงแล้ว!</strong></p>
+                    <p>เธอบอกว่า "ใช่" เมื่อ ${new Date(proposalResponse.timestamp).toLocaleString('th-TH')}</p>
+                    <p style="margin-top: 10px; font-size: 1.2rem;">ขอแสดงความยินดี!</p>
+                `;
+                
+            } else if (proposalResponse.answer === 'maybe') {
+                // She needs time
+                proposalSection.style.display = 'block';
+                
+                // Update response status
+                responseStatus.style.display = 'block';
+                responseStatus.style.backgroundColor = 'rgba(255, 193, 7, 0.1)';
+                responseStatus.style.borderColor = '#FFC107';
+                statusIcon.innerHTML = '<i class="fas fa-clock" style="color:#FF8F00"></i>';
+                statusMessage.innerHTML = `
+                    <p><strong>เธอต้องการเวลาคิด</strong></p>
+                    <p>เธอบอกว่า "ฉันต้องการเวลาคิดหน่อย" เมื่อ ${new Date(proposalResponse.timestamp).toLocaleString('th-TH')}</p>
+                    <p style="margin-top: 10px; font-size: 1.2rem;">ให้เธอมีเวลาในการตัดสินใจนะ</p>
+                `;
+                
+                // Update button
+                maybeBtn.innerHTML = '<i class="fas fa-hourglass-half"></i> ฉันเข้าใจและจะรอเธอ';
+                maybeBtn.disabled = true;
+                maybeBtn.style.opacity = '0.7';
+                
+                // Scroll to status
+                responseStatus.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        // Update admin panel with response data
+        function updateAdminPanel() {
+            if (proposalResponse.hasResponded) {
+                const answerText = proposalResponse.answer === 'yes' ? 
+                    '<span style="color:#4CAF50; font-weight:bold;">YES! She said YES!</span>' : 
+                    '<span style="color:#FF8F00; font-weight:bold;">She needs time to think</span>';
+                
+                const time = new Date(proposalResponse.timestamp).toLocaleString();
+                
+                responseData.innerHTML = `
+                    <div class="response-info">
+                        <p><strong>Status:</strong> ${answerText}</p>
+                        <p><strong>Time:</strong> ${time}</p>
+                        <p><strong>Page Visits:</strong> ${proposalResponse.pageVisits}</p>
+                        <p><strong>IP Address:</strong> ${proposalResponse.ipAddress || 'Fetching...'}</p>
+                    </div>
+                `;
+            } else {
+                responseData.innerHTML = `
+                    <p>Waiting for her response...</p>
+                    <p><strong>Page Visits:</strong> ${proposalResponse.pageVisits}</p>
+                `;
+            }
+        }
+        
+        // Send email notification (using Formspree as a free service)
+        async function sendEmailNotification(answer) {
+            const answerText = answer === 'yes' ? 'YES! She said YES!' : 'She needs time to think';
+            const time = new Date().toLocaleString();
+            
+            // Using Formspree as a free email service
+            // You need to sign up at https://formspree.io and replace the form ID
+            const formspreeFormId = "YOUR_FORMSPREE_FORM_ID"; // Replace with your Formspree form ID
+            
+            if (formspreeFormId === "YOUR_FORMSPREE_FORM_ID") {
+                console.log("Formspree not configured. Response saved locally only.");
+                console.log(`She answered: ${answerText} at ${time}`);
+                return;
+            }
+            
+            try {
+                const formData = new FormData();
+                formData.append('_replyto', YOUR_EMAIL);
+                formData.append('_subject', `PROPOSAL RESPONSE: ${answerText}`);
+                formData.append('message', `
+                    Proposal Website Response:
+                    
+                    ANSWER: ${answerText}
+                    TIME: ${time}
+                    USER AGENT: ${navigator.userAgent}
+                    IP: ${proposalResponse.ipAddress}
+                    PAGE VISITS: ${proposalResponse.pageVisits}
+                    
+                    This is an automated notification from your proposal website.
+                `);
+                
+                const response = await fetch(`https://formspree.io/f/${formspreeFormId}`, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    console.log("Email notification sent successfully!");
+                } else {
+                    console.log("Email notification failed, but response was saved locally.");
+                }
+            } catch (error) {
+                console.log("Could not send email. Response saved locally.");
+            }
+        }
+        
+        // Alternative email method using mailto link
+        function sendEmailViaMailto(answer) {
+            const answerText = answer === 'yes' ? 'YES! She said YES!' : 'She needs time to think';
+            const time = new Date().toLocaleString();
+            
+            const subject = `PROPOSAL RESPONSE: ${answerText}`;
+            const body = `
+Proposal Website Response:
+
+ANSWER: ${answerText}
+TIME: ${time}
+USER AGENT: ${navigator.userAgent}
+IP: ${proposalResponse.ipAddress || 'Unknown'}
+PAGE VISITS: ${proposalResponse.pageVisits}
+
+This is an automated notification from your proposal website.
+            `;
+            
+            const mailtoLink = `mailto:${YOUR_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.open(mailtoLink, '_blank');
+        }
+        
+        // Event Listeners
+        yesBtn.addEventListener('click', function() {
+            recordResponse('yes');
+        });
+        
+        maybeBtn.addEventListener('click', function() {
+            recordResponse('maybe');
+        });
+        
+        // Admin panel toggle
+        adminToggle.addEventListener('click', function() {
+            if (adminPanel.style.display === 'block') {
+                adminPanel.style.display = 'none';
+            } else {
+                adminPanel.style.display = 'block';
+                updateAdminPanel();
+            }
+        });
+        
+        // Send email button
+        sendEmailBtn.addEventListener('click', function() {
+            if (proposalResponse.hasResponded) {
+                sendEmailViaMailto(proposalResponse.answer);
+            } else {
+                alert("She hasn't responded yet!");
+            }
+        });
+        
+        // Change photo (you should replace with her actual photo URL)
+        function changePhoto() {
+            const thaiThemedPhotos = [
+                'Screenshot 2026-01-09 at 21.20.05.png',
+                'Screenshot 2026-01-09 at 21.20.20.png'
+            ];
+            
+            // To use her actual photo, replace this:
+            // herPhoto.src = "URL_OF_HER_PHOTO_HERE";
+            
+            // For demo only - cycling photos
+            let currentIndex = 0;
+            setInterval(() => {
+                if (thaiThemedPhotos.length > 1) {
+                    currentIndex = (currentIndex + 1) % thaiThemedPhotos.length;
+                    herPhoto.style.opacity = 0;
+                    setTimeout(() => {
+                        herPhoto.src = thaiThemedPhotos[currentIndex];
+                        herPhoto.style.opacity = 1;
+                    }, 500);
+                }
+            }, 10000);
+        }
+        
+        // Create golden celebration elements
+        function createGoldenCelebration() {
+            const thaiElements = document.getElementById('thaiElements');
+            
+            for (let i = 0; i < 50; i++) {
+                const element = document.createElement('div');
+                element.classList.add('thai-element');
+                element.innerHTML = '<i class="fas fa-star"></i>';
+                
+                const left = Math.random() * 100;
+                const delay = Math.random() * 2;
+                const duration = Math.random() * 3 + 2;
+                const size = Math.random() * 40 + 20;
+                
+                element.style.left = `${left}vw`;
+                element.style.fontSize = `${size}px`;
+                element.style.color = '#FFD700';
+                element.style.textShadow = '0 0 10px rgba(255, 215, 0, 0.8)';
+                element.style.animationDelay = `${delay}s`;
+                element.style.animationDuration = `${duration}s`;
+                
+                thaiElements.appendChild(element);
+                
+                setTimeout(() => {
+                    if (element.parentNode) {
+                        element.remove();
+                    }
+                }, (delay + duration) * 1000);
+            }
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load any saved response
+            loadSavedResponse();
+            
+            // Start photo rotation (replace with her actual photo)
+            changePhoto();
+            
+            // Add fade-in animation
+            const sections = document.querySelectorAll('.fade-in');
+            sections.forEach(section => {
+                section.classList.add('fade-in');
+            });
+            
+            // Show admin panel toggle (hidden from her by default)
+            adminToggle.style.display = 'flex';
+        });
+        
+        // Instructions
+        console.log("==============================================");
+        console.log("PROPOSAL RESPONSE TRACKING INSTRUCTIONS:");
+        console.log("==============================================");
+        console.log("1. HER VIEW: She will see the beautiful proposal");
+        console.log("2. YOUR VIEW: Click the eye icon (bottom-right) to see admin panel");
+        console.log("3. The admin panel shows:");
+        console.log("   - If she has responded");
+        console.log("   - What she answered (Yes or Needs Time)");
+        console.log("   - When she responded");
+        console.log("   - How many times she visited");
+        console.log("4. To get email notifications:");
+        console.log("   Option A: Replace YOUR_EMAIL with your actual email");
+        console.log("   Option B: Sign up at formspree.io for automatic emails");
+        console.log("5. Her response is saved in browser storage");
+        console.log("==============================================");
+    </script>
+</body>
+</html>
